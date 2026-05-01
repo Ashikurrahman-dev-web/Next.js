@@ -5,7 +5,7 @@ import twitter from "@/image/twitter.png";
 import instagram from "@/image/instagram.png";
 const Footer = () => {
     return (
-        <footer className="bg-[#1a4332] text-white py-24 px-6 mb-0">
+        <footer className="bg-[#0f0524] text-white py-24 px-6 mb-0">
       <div className="max-w-7xl mx-auto flex flex-col items-center">
         
         <div className="text-center mb-8">
@@ -38,7 +38,7 @@ const Footer = () => {
         </div>
 
    <div className="w-full border-t border-emerald-800/50 pt-8 flex flex-col md:flex-row justify-between items-center text-xs text-gray-400">
-          <p>© 2026 CourseHub. All rights reserved.</p>
+          <p className='hover:text-white transition-colors'>© 2026 CourseHub. All rights reserved.</p>
 
       <div className="flex space-x-6 mt-4 md:mt-0">
           <div className="hover:text-white transition-colors">Privacy Policy</div>
