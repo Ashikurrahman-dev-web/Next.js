@@ -1,6 +1,8 @@
 "use client";
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import Link from 'next/link';
+import NavLink from "@/component/shared/NavLink";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -16,8 +18,8 @@ const Navbar = () => {
           <span className="text-emerald-800">Hub</span>
         </h1>
         <div className="hidden md:flex items-center space-x-8 text-gray-600 font-medium">
-          <button className="cursor-pointer">Home</button>
-          <button className="cursor-pointer">All Course</button>
+          <button className="cursor-pointer"><NavLink href={"/"}>Home</NavLink></button>
+          <button className="cursor-pointer"><NavLink href={"/allcourse"}>All Course</NavLink></button>
           <button className="cursor-pointer">My Profile</button>
         </div>
         <div className="flex items-center space-x-4 md:space-x-6">

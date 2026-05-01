@@ -1,0 +1,69 @@
+[
+ {
+   "id": 1,
+   "title": "Complete Web Development Bootcamp",
+   "instructor": "Ashikur Rahman",
+   "duration": "6 months",
+   "rating": 4.9,
+   "level": "Beginner",
+   "description": "Learn full-stack web development from scratch.",
+   "image": "https://i.ibb.co.com/Nng4dQnf/C.png",
+   "category": "Development"
+ },
+
+{
+   "id": 2,
+   "title": "Complete Graphic Design Bootcamp",
+   "instructor": "Abdullah Shakir",
+   "duration": "3 months",
+   "rating": 4.8,
+   "level": "Beginner",
+   "description": "Learn graphic design fundamentals from scratch.",
+   "image": "https://i.ibb.co.com/5WWp0QLj/A.png",
+   "category": "Design"
+ },
+{
+   "id": 3,
+   "title": "Complete Digital Marketing Bootcamp",
+   "instructor": "Hasibul Hasan",
+   "duration": "2 months",
+   "rating": 4.7,
+   "level": "Beginner",
+   "description": "Learn digital marketing fundamentals from scratch.",
+   "image": "https://i.ibb.co.com/C5Cfxc3p/B.png",
+   "category": "Marketing"
+ },
+{
+   "id": 4,
+   "title": "Admision Test Preparation in Law department",
+   "instructor": "Md. Mohammad Taukir",
+   "duration": "4 months",
+   "rating": 4.6,
+   "level": "Beginner",
+   "description": "Preparation for admission test from scratch.",
+   "image": "https://i.ibb.co.com/SD6RFptN/675419551-3990768231059141-873960911782684524-n.jpg",
+   "category": "Law"
+ },
+{
+   "id": 5,
+   "title": "Complete English Speaking Bootcamp",
+   "instructor": "Md. Anisur Rahman",
+   "duration": "2 months",
+   "rating": 4.8,
+   "level": "Beginner",
+   "description": "Speak English fluently in 2 months.",
+   "image": "https://i.ibb.co.com/84t4RRMN/118616404-102037778304723-5258323471835994632-n.jpg",
+   "category": "English"
+ },
+{
+   "id": 6,
+   "title": "Business Communication Skills",
+   "instructor": "Md. Akibur Rahman",
+   "duration": "5 months",
+   "rating": 4.5,
+   "level": "Beginner",
+   "description": "Improve your business communication skills.",
+   "image": "https://i.ibb.co.com/xqzYP4GG/236141615-341996884298348-6535384167433752382-n.jpg",
+   "category": "Business"
+ }
+]

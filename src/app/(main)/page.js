@@ -8,6 +8,7 @@ import Marquee from "react-fast-marquee";
 import A from "@/image/A.png";
 import B from "@/image/B.png";
 import C from "@/image/C.png";
+import Link from "next/link";
 export default function Home() {
   return (
     <div>
@@ -61,7 +62,7 @@ export default function Home() {
                4.7★
                </div>
 <button className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
-                View Details </button>
+               <Link href={"/allcourse"}>View Details</Link></button>
             
           </div>
               <div
@@ -87,7 +88,7 @@ export default function Home() {
                4.9★
                </div>
 <button className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
-                View Details </button>
+                <Link href={"/allcourse"}>View Details</Link> </button>
             
           </div>
               <div
@@ -113,7 +114,7 @@ export default function Home() {
                4.8★
                </div>
 <button className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
-                View Details </button>
+                <Link href={"/allcourse"}>View Details</Link> </button>
             
           </div>
         </div>
