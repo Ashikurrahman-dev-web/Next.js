@@ -1,12 +1,14 @@
 "use client";
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import Link from 'next/link';
 import NavLink from "@/component/shared/NavLink";
-
+import avatar from "@/image/avatar.jpg"
+import Image from 'next/image';
+import {authClient} from  "@/lib/auth-client";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-
+  const { data: session } = authClient.useSession()
+const user = session?.user;
   return (
     <nav className="px-6 md:px-8 py-4 bg-white border-b border-gray-100">
       
@@ -24,11 +26,13 @@ const Navbar = () => {
         </div>
         <div className="flex items-center space-x-4 md:space-x-6">
           
-          
+          <div className="hidden md:block">
+            <Image src={user?.image || avatar} alt='avatar' width={50} height={50}/>
+          </div>
           
           
           <button className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm">
-           Login
+           <NavLink href={"/login"}>Login</NavLink>
           </button>
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -45,9 +49,9 @@ const Navbar = () => {
           <button className="cursor-pointer">My Profile</button>
 
           <div className="border-t pt-4 flex flex-col space-y-3">
-            
+            <div><Image src={avatar} alt='avatar' width={50} height={50}/></div>
             <button className="bg-[#7C3AED] text-white py-2 rounded-full coursor-pointer ">
-              Get Started
+              <NavLink href={"/login"}>Login</NavLink>
             </button>
           </div>
         </div>

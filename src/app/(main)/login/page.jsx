@@ -1,9 +1,40 @@
+"use client"
 import React from 'react';
-
+import Link from 'next/link';
+import { useForm } from "react-hook-form"
+import {authClient}  from '@/lib/auth-client';
 const LoginPage = () => {
+    const {register, handleSubmit, formState:{errors}} = useForm()
+    const handleLoginFunc = async(data) =>{
+        console.log(data, "data");
+        const { data:res, error } = await authClient.signIn.email({
+    email:data.email, 
+    password: data.password, 
+    rememberMe: true,
+    callbackURL: "https://example.com/callback",
+});
+    }
     return (
-        <div>
-            <h1>Login</h1>
+        <div className='container mx-auto min-h-[80vh] flex justify-center items-center'>
+          <div className='p-4 rounded-xl bg-white'>
+            <h6 className='text-center text-blue-600 font-bold'>Login your account</h6>
+            <form onSubmit={handleSubmit(handleLoginFunc)}>
+<fieldset className="fieldset bg-base-200 border-base-300 rounded-full w-xs border p-4">
+  <legend className="fieldset-legend font-bold text-black">Email Address</legend>
+  <input type="Email" className="input rounded-full" 
+   placeholder="Enter Your Email Address"  {...register("email",{required: "Email field is required"})}/>
+{errors.password &&<p className='text-red-500 text-center font-bold'>{errors.email.message}</p>}
+  <legend className="fieldset-legend font-bold text-black">Password</legend>
+  <input type="password" className="input rounded-full" 
+   placeholder="Type Your Password"  {...register("password",{required: "Password field is required"})}/>
+{errors.password &&<p className='text-red-500 text-center font-bold'>{errors.password.message}</p>}
+  <button className="btn btn-neutral rounded-full bg-blue-600 mt-4"><Link href={"/"}>Login</Link></button>
+</fieldset></form>
+<div className='flex justify-center items-center gap-1'>
+    <p>Don't Have An Account?</p>
+    <button className='cursor-pointer text-blue-600'>
+        <Link href={"/register"}>Register</Link></button></div>
+            </div>  
         </div>
     );
 };

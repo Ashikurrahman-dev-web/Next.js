@@ -184,7 +184,7 @@ Time Blocking: Instead of a simple "To-Do" list, assign specific hours of the da
            
             <Image
               src={C}
-              alt="Web Developer"             width={200} height={200}
+              alt="Web Developer"             width={200} height={300}
               className=" rounded-2xl object-cover mb-4"
             />
 
@@ -207,7 +207,7 @@ Time Blocking: Instead of a simple "To-Do" list, assign specific hours of the da
            
             <Image
               src={A}
-              alt="Graphic Designer"             width={200} height={200}
+              alt="Graphic Designer"             width={200} height={300}
               className=" rounded-2xl object-cover mb-4"
             />
 
