@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import book from "@/image/book.jpg";
+import book from "@/image/book.png";
 import digital from "@/image/digital.png";
 import web from "@/image/web.png";
 import graphic from "@/image/graphic.png";
@@ -9,7 +9,7 @@ import A from "@/image/A.png";
 import B from "@/image/B.png";
 import C from "@/image/C.png";
 import Link from "next/link";
-export default function Home() {
+const HomePage = ()=> {
   return (
     <div>
     <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-2 gap-12 items-center">
@@ -228,3 +228,4 @@ Time Blocking: Instead of a simple "To-Do" list, assign specific hours of the da
         </div>
   );
 }
+export default HomePage;
