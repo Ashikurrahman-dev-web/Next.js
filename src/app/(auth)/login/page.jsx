@@ -1,14 +1,25 @@
 "use client"
+import { useRouter } from "next/navigation";
  import {FaEye,FaGoogle, FaEyeSlash } from "react-icons/fa";
  import React, { useState } from 'react';
   import Link from 'next/link';
    import { useForm } from "react-hook-form";
     import {authClient} from '@/lib/auth-client'; 
+    import toast from "react-hot-toast";
     const LoginPage = () => {
-        const handleGoogleSignIn =async ()=>{
-            const data = await authClient.signIn.social({
-    provider: "google",
-  }); };
+        const router = useRouter();
+        const handleGoogleSignIn = async () => {
+  try {
+    const data = await authClient.signIn.social({
+      provider: "google",
+    });
+
+    toast.success("✅ Google Login Successful!");
+    router.push("/home");
+  } catch (err) {
+    toast.error("❌ Google Login Failed!");
+  }
+};
          const {register, handleSubmit, formState:{errors}} = useForm()
           const handleLoginFunc = async(data) =>{
              console.log(data, "data");
@@ -22,7 +33,7 @@
             <h6 className='text-center text-black font-bold'>Login with google</h6> 
 <button onClick={handleGoogleSignIn}
 className="bg-blue-600 flex justify-center gap-2 items-center text-white py-2 rounded-full cursor-pointer ">
-                 <span><FaGoogle /></span> <Link href={"/home"}>Login with google</Link>
+                 <span><FaGoogle /></span> Login with google
                   </button>
              </div>
      <div className='container mx-auto min-h-[80vh] flex justify-center items-center'> 
@@ -50,4 +61,4 @@ className="bg-blue-600 flex justify-center gap-2 items-center text-white py-2 ro
             </div>
             </div>
              ); }; 
-export default LoginPage;
+export default LoginPage;       

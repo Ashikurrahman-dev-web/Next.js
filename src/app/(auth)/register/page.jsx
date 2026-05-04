@@ -1,10 +1,12 @@
 "use client"
+
 import {FaEye,FaGoogle, FaEyeSlash } from "react-icons/fa";
 import React,{ useState } from 'react';
 import Link from 'next/link';
 import  {authClient}  from '@/lib/auth-client';
 import { useForm } from "react-hook-form"
 const RegisterPage = () => {
+  
     const {register, handleSubmit, formState:{errors}} = useForm()
     const handleRegisterFunc = async(data) =>{
         console.log(data,"data");

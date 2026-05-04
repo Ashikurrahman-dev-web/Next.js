@@ -9,12 +9,13 @@ import A from "@/image/A.png";
 import B from "@/image/B.png";
 import C from "@/image/C.png";
 import Link from "next/link";
+import 'animate.css';
 const HomePage = ()=> {
   return (
     <div>
     <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-2 gap-12 items-center">
           
-          <div className="space-y-6 ml-9">
+          <div className="space-y-6 ml-9 animate__animated animate__backInLeft">
             <div className="inline-flex items-center gap-2 bg-[#F3E8FF] text-[#7C3AED] px-4 py-1.5 rounded-full font-medium text-sm">
               <div className="w-2.5 h-2.5 bg-[#7C3AED] rounded-full"></div>
               New: Premium Courses Available
@@ -28,7 +29,7 @@ const HomePage = ()=> {
             </p>
             
             </div>
-          <div className="flex justify-center md:justify-end">
+          <div className="flex justify-center md:justify-end animate__animated animate__backInRight">
             <Image 
               src={book} 
               alt="book" width={380} height={380}
@@ -41,7 +42,7 @@ const HomePage = ()=> {
         <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-3 gap-12 items-center">
               <div
             
-            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
+            className="bg-white rounded-xl animate__animated animate__backInLeft shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
            
             <Image
               src={digital}
@@ -93,7 +94,7 @@ const HomePage = ()=> {
           </div>
               <div
             
-            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
+            className="bg-white rounded-xl animate__animated animate__backInRight shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
            
             <Image
               src={graphic}
@@ -157,7 +158,7 @@ Time Blocking: Instead of a simple "To-Do" list, assign specific hours of the da
 <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-3 gap-12 items-center">
 <div
             
-            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
+     className="bg-white rounded-xl animate__animated animate__backInLeft shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
            
             <Image
               src={B}
@@ -203,7 +204,7 @@ Time Blocking: Instead of a simple "To-Do" list, assign specific hours of the da
 </div>
 <div
             
-            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
+    className="bg-white rounded-xl animate__animated animate__backInRight shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
            
             <Image
               src={A}

@@ -1,21 +1,31 @@
 "use client";
-
-import React, { useEffect, useState } from "react";
+import 'animate.css';
+import React, { useEffect, useState, } from "react";
 import Link from "next/link";
 
 const CoursePage = () => {
   const [courses, setCourses] = useState([]);
   const [search, setSearch] = useState("");
-  const [query, setQuery] = useState(""); // 
+  const [query, setQuery] = useState("");
+  const [loading, setLoading] = useState(true);
 
-  // fetch data
   useEffect(() => {
+     setLoading(true);
     fetch("/course.json")
       .then((res) => res.json())
-      .then((data) => setCourses(data));
+      .then((data) => {
+        setCourses(data);
+        setLoading(false);
+      });
   }, []);
+if (loading) {
+  return (
+    <div className="flex justify-center items-center h-[60vh]">
+      <p className="animate-pulse text-xl">Loading...</p>
+    </div>
 
-  
+  );
+}
   const filteredCourses = courses.filter((course) =>
     course.title.toLowerCase().includes(query.toLowerCase())
   );
@@ -46,8 +56,10 @@ const CoursePage = () => {
         </button>
       </div>
 
+  
+
       
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 animate__animated animate__backInUp md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredCourses.length > 0 ? (
           filteredCourses.map((course) => (
             <div

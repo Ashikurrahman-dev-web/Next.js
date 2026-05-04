@@ -48,6 +48,7 @@ export default function Home() {
                 </div>
             )}
           </nav>
+          <h6 className='flex text-green-600 mt-8 mb-8 text-2xl justify-center font-bold mx-auto'>Before visit the site please Login</h6>
     <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-2 gap-12 items-center">
           
           <div className="space-y-6 ml-9">

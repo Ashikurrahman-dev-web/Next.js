@@ -1,12 +1,17 @@
 import React from 'react';
 import Navbar from "@/component/shared/Navbar";
 import Footer from "@/component/shared/Footer";
+import { UserProvider } from "@/context/UserContext";
 const MainLayout = ({ children }) => {
     return (
         <>
-         <Navbar />
-            {children} 
-            <Footer />  
+         
+          <UserProvider>
+            <Navbar />
+            {children}
+            <Footer /> 
+ </UserProvider>
+           
         </>
     );
 };
