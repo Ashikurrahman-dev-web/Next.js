@@ -1,10 +1,10 @@
 import Link from "next/link";
 import React from "react";
 import EnrollModal from "@/component/shared/EnrollModal";
-import courses from "../../../public/course.json";
+import courses from "@/../public/course.json";
 
 async function getCourse(id) {
-  return courses.find((course) => course.id == id);
+  return courses.find((course) => course.id == Number(id));
 }
 
 const CourseDetailsPage = async ({ params }) => {
