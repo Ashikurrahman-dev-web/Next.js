@@ -1,5 +1,4 @@
 "use client"
-
 import {FaEye,FaGoogle, FaEyeSlash } from "react-icons/fa";
 import React,{ useState } from 'react';
 import Link from 'next/link';
@@ -21,8 +20,9 @@ name: name,
     };
      const [isShowPassword, setIsShowPassword] = useState(false);
      const handleGoogleSignIn =async ()=>{
-                 const data = await authClient.signIn.social({
+                  await authClient.signIn.social({
          provider: "google",
+         callbackURL: "/home",
        });
              }
     return (

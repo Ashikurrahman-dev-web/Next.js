@@ -41,7 +41,7 @@ className="bg-blue-600 flex justify-center gap-2 items-center text-white py-2 ro
 <fieldset className="fieldset bg-base-200 border-base-300 rounded-full w-xs border p-4"> 
   <legend className="fieldset-legend font-bold text-black">Email Address</legend> 
  <input type="Email" className="input rounded-full" placeholder="Enter Your Email Address" {...register("email",{required: "Email field is required"})}/> 
-   {errors.password &&<p className='text-red-500 text-center font-bold'>{errors.email.message}</p>} 
+   {errors.email &&<p className='text-red-500 text-center font-bold'>{errors.email.message}</p>} 
      <legend className="fieldset-legend font-bold text-black">Password</legend> 
        
       <input type={isShowPassword ? "text": "password"} 
