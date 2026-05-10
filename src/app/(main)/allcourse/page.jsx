@@ -11,7 +11,7 @@ const CoursePage = () => {
 
   useEffect(() => {
      setLoading(true);
-    fetch("/course.json")
+    fetch("@/data/course.json")
       .then((res) => res.json())
       .then((data) => {
         setCourses(data);
