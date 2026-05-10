@@ -4,7 +4,7 @@ import EnrollModal from "@/component/shared/EnrollModal";
 import courses from "@/data/course.json";
 
 async function getCourse(id) {
-  return courses.find((course) => course.id === Number(id));
+  return courses.find((course) => course.id === id);
 }
 
 const CourseDetailsPage = async ({ params }) => {
