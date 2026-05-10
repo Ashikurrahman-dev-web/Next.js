@@ -10,14 +10,13 @@ import { useRouter } from "next/navigation";
         const router = useRouter();
         const handleGoogleSignIn = async () => {
   try {
-    const data = await authClient.signIn.social({
+    await authClient.signIn.social({
       provider: "google",
+      callbackURL: "/home",
     });
-
-    toast.success("✅ Google Login Successful!");
-    router.push("/home");
   } catch (err) {
     toast.error("❌ Google Login Failed!");
+    console.log(err);
   }
 };
          const {register, handleSubmit, formState:{errors}} = useForm()
