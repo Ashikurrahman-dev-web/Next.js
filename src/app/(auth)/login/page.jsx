@@ -24,8 +24,7 @@ import { useRouter } from "next/navigation";
           const handleLoginFunc = async(data) =>{
              console.log(data, "data");
               const { data:res, error } = await authClient.signIn.email({
-    email:data.email, password: data.password,
-     rememberMe: true, callbackURL: "https://example.com/callback", });};
+    email:data.email, password: data.password});};
          const [isShowPassword, setIsShowPassword] = useState(false);
                 return (
          <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-2 gap-12 items-center">

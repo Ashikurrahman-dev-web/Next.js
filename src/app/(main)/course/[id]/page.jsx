@@ -1,16 +1,20 @@
 import Link from "next/link";
 import React from "react";
 import EnrollModal from "@/component/shared/EnrollModal";
-import courses from "@/../public/course.json";
+import courses from "@/data/course.json";
 
 async function getCourse(id) {
-  return courses.find((course) => course.id == Number(id));
+  return courses.find((course) => course.id === Number(id));
 }
 
 const CourseDetailsPage = async ({ params }) => {
   const { id } = params;
 
   const course = await getCourse(id);
+
+  if (!course) {
+    return <h1>Course not found</h1>;
+  }
 
   return (
     <div className="max-w-5xl mx-auto p-6 mt-10">
@@ -42,7 +46,7 @@ const CourseDetailsPage = async ({ params }) => {
             <EnrollModal />
 
             <button className="bg-[#0f0524] cursor-pointer text-white px-6 py-3 rounded-xl">
-              <Link href={"/allcourse"}>Go back</Link>
+              <Link href="/allcourse">Go back</Link>
             </button>
           </div>
         </div>
