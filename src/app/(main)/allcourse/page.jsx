@@ -1,36 +1,18 @@
 "use client";
-import 'animate.css';
-import React, { useEffect, useState, } from "react";
+
+import "animate.css";
+import React, { useState } from "react";
 import Link from "next/link";
+import coursesData from "@/data/course.json";
 
 const CoursePage = () => {
-  const [courses, setCourses] = useState([]);
   const [search, setSearch] = useState("");
   const [query, setQuery] = useState("");
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-     setLoading(true);
-    fetch("@/data/course.json")
-      .then((res) => res.json())
-      .then((data) => {
-        setCourses(data);
-        setLoading(false);
-      });
-  }, []);
-if (loading) {
-  return (
-    <div className="flex justify-center items-center h-[60vh]">
-      <p className="animate-pulse text-xl">Loading...</p>
-    </div>
-
-  );
-}
-  const filteredCourses = courses.filter((course) =>
+  const filteredCourses = coursesData.filter((course) =>
     course.title.toLowerCase().includes(query.toLowerCase())
   );
 
-  
   const handleSearch = () => {
     setQuery(search);
   };
@@ -38,7 +20,7 @@ if (loading) {
   return (
     <div className="max-w-7xl mx-auto mt-5 mb-5 px-4">
       
-     
+      {/* Search Section */}
       <div className="mb-6 flex items-center justify-center gap-2">
         <input
           type="text"
@@ -56,15 +38,13 @@ if (loading) {
         </button>
       </div>
 
-  
-
-      
+      {/* Courses Grid */}
       <div className="grid grid-cols-1 animate__animated animate__backInUp md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredCourses.length > 0 ? (
           filteredCourses.map((course) => (
             <div
               key={course.id}
-              className="bg-white rounded-2xl p-6 border shadow-sm hover:shadow-md transition hover:scale-105"
+              className="bg-white rounded-2xl p-6 border shadow-sm hover:shadow-md transition duration-300 hover:scale-105"
             >
               <img
                 src={course.image}
@@ -76,11 +56,11 @@ if (loading) {
                 {course.title}
               </h3>
 
-              <p className="text-gray-500 text-sm mb-4">
+              <p className="text-gray-500 text-sm mb-4 line-clamp-3">
                 {course.description}
               </p>
 
-              <div className="mb-4 text-sm text-gray-600">
+              <div className="mb-4 text-sm text-gray-600 space-y-1">
                 <p>👨‍🏫 {course.instructor}</p>
                 <p>⏳ {course.duration}</p>
                 <p>⭐ {course.rating}</p>
@@ -88,14 +68,14 @@ if (loading) {
               </div>
 
               <Link href={`/course/${course.id}`}>
-                <button className="bg-[#0f0524] text-white px-5 py-2 rounded-lg text-sm cursor-pointer">
+                <button className="bg-[#0f0524] text-white px-5 py-2 rounded-lg text-sm cursor-pointer hover:bg-[#1f0a47] transition">
                   View Details
                 </button>
               </Link>
             </div>
           ))
         ) : (
-          <p className="text-gray-500 text-center col-span-full">
+          <p className="text-gray-500 text-center col-span-full text-lg">
             No courses found 😢
           </p>
         )}
