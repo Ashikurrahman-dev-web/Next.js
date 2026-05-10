@@ -5,7 +5,7 @@ async function getCourse(id) { const res = await fetch(`${process.env.NEXT_PUBLI
   cache: "no-store",
 });
 const data = await res.json();
-return data.find((course) => course.id == id);
+return data.find((course) => course.id == Number(id));
 }
 
 const CourseDetailsPage = async ({ params }) => {
