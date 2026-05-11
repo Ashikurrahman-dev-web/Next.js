@@ -40,9 +40,11 @@ const Navbar = () => {
 </div>
           
           
-          <button className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm">
-           <NavLink href={"/"}>Log Out</NavLink>
-          </button>
+          
+           <NavLink
+className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm"    
+           href={"/"}>Log Out</NavLink>
+          
           <button
             onClick={() => setMenuOpen(!menuOpen)}
             className="md:hidden text-gray-700"
@@ -71,9 +73,12 @@ const Navbar = () => {
     {user?.name || "Name"}
   </div>
 </div>
-            <button className="bg-[#7C3AED] text-white py-2 rounded-full coursor-pointer ">
-              <NavLink href={"/"}>Log Out</NavLink>
-            </button>
+            
+              <NavLink
+               href={"/"}
+               className="bg-[#7C3AED] text-white py-2 rounded-full coursor-pointer"
+               >Log Out</NavLink>
+            
           </div>
         </div>
       )}

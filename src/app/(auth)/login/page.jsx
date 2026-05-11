@@ -20,10 +20,30 @@ import { useRouter } from "next/navigation";
   }
 };
          const {register, handleSubmit, formState:{errors}} = useForm()
-          const handleLoginFunc = async(data) =>{
-             console.log(data, "data");
-              const { data:res, error } = await authClient.signIn.email({
-    email:data.email, password: data.password});};
+          const handleLoginFunc = async (data) => {
+
+  try {
+
+    const { data: res, error } =
+      await authClient.signIn.email({
+        email: data.email,
+        password: data.password,
+      });
+
+    if (error) {
+      toast.error(error.message);
+      return;
+    }
+
+    toast.success("✅ Login Successful!");
+
+    router.push("/home");
+
+  } catch (err) {
+    toast.error("❌ Login Failed!");
+    console.log(err);
+  }
+};
          const [isShowPassword, setIsShowPassword] = useState(false);
                 return (
          <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-2 gap-12 items-center">
@@ -49,9 +69,9 @@ className="bg-blue-600 flex justify-center gap-2 items-center text-white py-2 ro
          <button className="ml-50 cursor-pointer" onClick={()=>setIsShowPassword(!isShowPassword)}> 
      {isShowPassword ? <FaEye /> : <FaEyeSlash />}</button> 
     {errors.password &&<p className='text-red-500 text-center font-bold'>{errors.password.message}</p>}
-        <Link href="/home" className="btn btn-neutral rounded-full bg-blue-600 mt-4">
+        <button  className="btn btn-neutral rounded-full bg-blue-600 mt-4">
           Login
-        </Link>
+        </button>
     </fieldset></form>
         <div className='flex justify-center items-center gap-1'>
          <p>Don't Have An Account?</p> 
