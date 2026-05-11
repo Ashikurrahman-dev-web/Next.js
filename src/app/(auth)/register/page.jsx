@@ -14,7 +14,7 @@ const RegisterPage = () => {
 name: name, 
     email: email, 
     password:password, 
-    callbackURL: "/",
+    callbackURL: "/home",
         });
         console.log(res, error);
     };

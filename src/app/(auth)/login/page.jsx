@@ -49,12 +49,14 @@ className="bg-blue-600 flex justify-center gap-2 items-center text-white py-2 ro
          <button className="ml-50 cursor-pointer" onClick={()=>setIsShowPassword(!isShowPassword)}> 
      {isShowPassword ? <FaEye /> : <FaEyeSlash />}</button> 
     {errors.password &&<p className='text-red-500 text-center font-bold'>{errors.password.message}</p>}
-        <button className="btn btn-neutral rounded-full bg-blue-600 mt-4"><Link href={"/home"}>Login</Link></button> 
+        <Link href="/home" className="btn btn-neutral rounded-full bg-blue-600 mt-4">
+          Login
+        </Link>
     </fieldset></form>
         <div className='flex justify-center items-center gap-1'>
          <p>Don't Have An Account?</p> 
-        <button className='cursor-pointer text-blue-600'> 
-            <Link href={"/register"}>Register</Link></button></div> 
+         
+            <Link href="/register" className='cursor-pointer text-blue-600'>Register</Link></div> 
             </div> 
             </div>
             </div>

@@ -28,9 +28,11 @@ export default function Home() {
                 
                 
                 
-   <button className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm">
-                 <Link href={"/login"}>Login</Link>
-                </button>
+   
+       <Link href="/login"
+  className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm">
+                 Login</Link>
+                
                 <button
                   onClick={() => setMenuOpen(!menuOpen)}
                   className="md:hidden text-gray-700"
@@ -42,9 +44,10 @@ export default function Home() {
             {menuOpen && (
               <div className="mt-4 flex flex-col space-y-4 md:hidden text-gray-600 font-medium">
                 
-                  <button className="bg-[#7C3AED] text-white py-2 rounded-full cursor-pointer ">
-                    <Link href={"/login"}>Login</Link>
-                  </button>
+                  
+                <Link href="/login"className="bg-[#7C3AED] text-white py-2 rounded-full cursor-pointer">
+                    Login</Link>
+                  
                 </div>
             )}
           </nav>
