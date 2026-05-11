@@ -41,9 +41,11 @@ const Navbar = () => {
           
           
           
-           <NavLink
-className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm"    
-           href={"/"}>Log Out</NavLink>
+          <button
+className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm">
+             <NavLink   href={"/"}>
+          Log Out</NavLink>
+          </button>
           
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -73,13 +75,11 @@ className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 roun
     {user?.name || "Name"}
   </div>
 </div>
-            
+            <button className="bg-[#7C3AED] text-white py-2 rounded-full coursor-pointer">
               <NavLink
-               href={"/"}
-               className="bg-[#7C3AED] text-white py-2 rounded-full coursor-pointer"
-               >Log Out</NavLink>
-            
-          </div>
+               href={"/"}>
+                Log Out</NavLink></button>
+            </div>
         </div>
       )}
     </nav>
