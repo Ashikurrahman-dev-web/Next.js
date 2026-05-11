@@ -34,7 +34,7 @@ const RegisterPage = () => {
           name,
           email,
           password,
-          callbackURL: "/home",
+          callbackURL: "/login",
         });
 
       if (error) {
@@ -44,7 +44,7 @@ const RegisterPage = () => {
 
       toast.success("✅ Register Successful!");
 
-      router.push("/home");
+      router.push("/login");
 
     } catch (err) {
       toast.error("❌ Register Failed!");
