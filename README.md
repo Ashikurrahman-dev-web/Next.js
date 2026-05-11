@@ -31,7 +31,5 @@ Ashikur Rahman
 ⭐ Support
 
 If you like this project, give it a ⭐ on GitHub!
-<<<<<<< HEAD
-=======
 
->>>>>>> c2ee29c (README file added)
+
