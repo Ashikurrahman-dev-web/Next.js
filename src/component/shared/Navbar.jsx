@@ -19,12 +19,11 @@ const Navbar = () => {
           <span className="text-emerald-800">Hub</span>
         </h1>
         <div className="hidden md:flex items-center space-x-8 text-gray-600 font-medium">
-          <button className="cursor-pointer"><NavLink href={"/home"}>Home</NavLink></button>
-          <button className="cursor-pointer"><NavLink href={"/allcourse"}>All Course</NavLink></button>
-          <button className="cursor-pointer"><NavLink href={"/myprofile"}>My Profile</NavLink></button>
+         <NavLink href={"/home"}> <button className="cursor-pointer">Home</button></NavLink>
+        <NavLink href={"/allcourse"}>  <button className="cursor-pointer">All Course</button></NavLink>
+        <NavLink href={"/myprofile"}>  <button className="cursor-pointer">My Profile</button></NavLink>
         </div>
         <div className="flex items-center space-x-4 md:space-x-6">
-          
           <div className="hidden md:flex items-center gap-3">
   <Image
     src={user?.image || avatar}
@@ -41,11 +40,11 @@ const Navbar = () => {
           
           
           
-          <button
+      <NavLink   href={"/"}>    <button
 className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm">
-             <NavLink   href={"/"}>
-          Log Out</NavLink>
-          </button>
+             
+          Log Out
+          </button></NavLink>
           
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -57,9 +56,9 @@ className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 roun
       </div>
       {menuOpen && (
         <div className="mt-4 flex flex-col space-y-4 md:hidden text-gray-600 font-medium">
-          <button className="cursor-pointer"><NavLink href={"/home"}>Home</NavLink></button>
-          <button className="cursor-pointer"><NavLink href={"/allcourse"}>All Course</NavLink></button>
-          <button className="cursor-pointer"><NavLink href={"/myprofile"}>My Profile</NavLink></button>
+         <NavLink href={"/home"}> <button className="cursor-pointer">Home</button></NavLink>
+        <NavLink href={"/allcourse"}>  <button className="cursor-pointer">All Course</button></NavLink>
+        <NavLink href={"/myprofile"}>  <button className="cursor-pointer">My Profile</button></NavLink>
 
           <div className="border-t pt-4 flex flex-col space-y-3">
             <div className="flex items-center gap-3">
@@ -75,10 +74,10 @@ className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 roun
     {user?.name || "Name"}
   </div>
 </div>
-            <button className="bg-[#7C3AED] text-white py-2 rounded-full coursor-pointer">
-              <NavLink
-               href={"/"}>
-                Log Out</NavLink></button>
+           <NavLink
+               href={"/"}> <button className="bg-[#7C3AED] text-white py-2 rounded-full coursor-pointer">
+              
+                Log Out</button></NavLink>
             </div>
         </div>
       )}

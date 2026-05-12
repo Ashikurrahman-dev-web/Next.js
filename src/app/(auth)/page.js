@@ -7,6 +7,7 @@ import facebook from "@/image/facebook.png";
 import twitter from "@/image/twitter.png";
 import instagram from "@/image/instagram.png";
 import Link from "next/link";
+import NavLink from "@/component/shared/NavLink";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
@@ -20,18 +21,15 @@ export default function Home() {
                 <span className="text-slate-900">Course</span>
                 <span className="text-emerald-800">Hub</span>
               </h1>
-              <div className="hidden md:flex items-center space-x-8 text-gray-600 font-medium">
-                
+           <div className="hidden md:flex items-center space-x-8 text-gray-600 font-medium">
+   <NavLink href={"/login"}>  <button className="cursor-pointer">Home</button></NavLink>
+   <NavLink href={"/login"}>  <button className="cursor-pointer">All Course</button></NavLink>
+    <NavLink href={"/login"}>  <button className="cursor-pointer">My Profile</button></NavLink>
               </div>
               <div className="flex items-center space-x-4 md:space-x-6">
-                
-                
-                
-                
-   
-       <Link href="/login"
-  className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm">
-                 Login</Link>
+                <Link href="/login">
+  <button className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm">
+                 Login</button></Link>
                 
                 <button
                   onClick={() => setMenuOpen(!menuOpen)}
@@ -42,16 +40,19 @@ export default function Home() {
               </div>
             </div>
             {menuOpen && (
-              <div className="mt-4 flex flex-col space-y-4 md:hidden text-gray-600 font-medium">
-                
+         <div className="mt-4 flex flex-col space-y-4 md:hidden text-gray-600 font-medium">
+     <NavLink href={"/login"}>  <button className="cursor-pointer">Home</button></NavLink>
+     <NavLink href={"/login"}>  <button className="cursor-pointer">All Course</button></NavLink>
+    <NavLink href={"/login"}>  <button className="cursor-pointer">My Profile</button></NavLink>   
                   
-                <Link href="/login"className="bg-[#7C3AED] text-white py-2 rounded-full cursor-pointer">
-                    Login</Link>
+    <Link href="/login">
+   < button className="bg-[#7C3AED] text-white py-2 rounded-full cursor-pointer">
+                Login</button></Link>
                   
                 </div>
             )}
           </nav>
-          <h6 className='flex text-green-600 mt-8 mb-8 text-2xl justify-center font-bold mx-auto'>Before visit the site please Login</h6>
+      <h6 className='flex text-green-600 mt-8 mb-8 text-2xl justify-center font-bold mx-auto'>Before visit the site please Login</h6>
     <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-2 gap-12 items-center">
           
           <div className="space-y-6 ml-9">
@@ -76,6 +77,97 @@ export default function Home() {
             />
           </div>
         </div>
+ <h2 className="flex items-center justify-center text-blue-600 text-2xl font-bold mb-6">
+           Top 3 highest-rated courses
+ </h2>
+         <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-3 gap-12 items-center">
+           <div
+             
+ className="bg-white rounded-xl animate__animated animate__backInLeft shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
+            
+             <Image
+               src={digital}
+               alt="digital"             width={200} height={200}
+               className=" rounded-2xl object-cover mb-4"
+             />
+ 
+             
+             <h3 className="font-semibold text-lg">Digital Marketing</h3>
+ 
+             
+             <p className="text-sm text-gray-500 mb-3">
+              Hasibul Hasan
+             </p>
+ 
+             
+             <div className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">
+                4.7★
+                </div>
+ <Link href={"/login"}><button 
+ className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
+                View Details</button></Link>
+             
+           </div>
+               <div
+             
+   className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
+            
+             <Image
+               src={web}
+               alt="web"             width={200} height={200}
+               className=" rounded-2xl object-cover mb-4"
+             />
+ 
+             
+             <h3 className="font-semibold text-lg">Web Development</h3>
+ 
+             
+             <p className="text-sm text-gray-500 mb-3">
+              Ashikur Rahman
+             </p>
+ 
+             
+             <div className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">
+                4.9★
+                </div>
+ <Link href={"/login"}><button 
+ className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
+                View Details</button></Link>
+             
+           </div>
+               <div
+             
+             className="bg-white rounded-xl animate__animated animate__backInRight shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
+            
+             <Image
+               src={graphic}
+               alt="graphic"             width={200} height={200}
+               className=" rounded-2xl object-cover mb-4"
+             />
+ 
+             
+             <h3 className="font-semibold text-lg">Graphic Design</h3>
+ 
+             
+             <p className="text-sm text-gray-500 mb-3">
+             Abdullah Shakir
+             </p>
+ 
+             
+             <div className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">
+                4.8★
+                </div>
+ <Link href={"/login"}><button 
+ className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
+                View Details</button></Link>
+             </div>
+             <Link href={"/login"}>
+        <button
+className="ml-5 border-2 border-[#0f172a] text-[#0f172a] hover:bg-[#0f172a] hover:text-white font-bold px-8 py-5 rounded-full transition-all duration-300">
+          See More
+        </button>
+      </Link>
+         </div>       
         <footer className="bg-[#0f0524] text-white py-24 px-6 mb-0">
               <div className="max-w-7xl mx-auto flex flex-col items-center">
                 

@@ -23,8 +23,8 @@ const HomePage = ()=> {
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-[#111827] leading-tight">
               Supercharge Your <span className='text-purple-500'>Future Workflow</span>
             </h1>
-            <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
-              Access premium courses, exclusive content, and personalized learning paths to accelerate your growth
+    <p className="text-gray-600 text-lg md:text-xl max-w-2xl">
+ Access premium courses, exclusive content, and personalized learning paths to accelerate your growth
                and stay ahead in the modern world.
             </p>
             
@@ -37,12 +37,13 @@ const HomePage = ()=> {
             />
           </div>
         </div>
-        <h2 className="flex items-center justify-center text-blue-600 text-2xl font-bold mb-6">Top 3 highest-rated courses
+     <h2 className="flex items-center justify-center text-blue-600 text-2xl font-bold mb-6">
+          Top 3 highest-rated courses
 </h2>
         <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-3 gap-12 items-center">
-              <div
+          <div
             
-            className="bg-white rounded-xl animate__animated animate__backInLeft shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
+className="bg-white rounded-xl animate__animated animate__backInLeft shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
            
             <Image
               src={digital}
@@ -62,13 +63,14 @@ const HomePage = ()=> {
             <div className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">
                4.7★
                </div>
-<button className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
-               <Link href={"/allcourse"}>View Details</Link></button>
+<Link href={"/digital"}><button 
+className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
+               View Details</button></Link>
             
           </div>
               <div
             
-            className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
+  className="bg-white rounded-xl shadow-md p-6 flex flex-col items-center text-center hover:shadow-lg transition hover:scale-105">
            
             <Image
               src={web}
@@ -88,8 +90,9 @@ const HomePage = ()=> {
             <div className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">
                4.9★
                </div>
-<button className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
-                <Link href={"/allcourse"}>View Details</Link> </button>
+<Link href={"/web"}><button 
+ className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
+                View Details</button></Link>
             
           </div>
               <div
@@ -114,12 +117,19 @@ const HomePage = ()=> {
             <div className="text-xs px-2 py-1 bg-green-100 text-green-700 rounded-full">
                4.8★
                </div>
-<button className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
-                <Link href={"/allcourse"}>View Details</Link> </button>
-            
-          </div>
+<Link href={"/graphic"}><button 
+ className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 py-3 rounded-xl font-medium shadow-lg">
+                View Details</button></Link>
+             </div>
+             <Link href={"/allcourse"}>
+        <button
+ className="ml-5 border-2 border-[#0f172a] text-[#0f172a] hover:bg-[#0f172a] hover:text-white font-bold px-8 py-5 rounded-full transition-all duration-300"
+        >
+          See More
+        </button></Link>
         </div>
-        <h2 className="flex items-center justify-center text-purple-600 text-2xl font-bold mb-6">🧠 Effective Study Techniques
+    <h2 className="flex items-center justify-center text-purple-600 text-2xl font-bold mb-6">
+          🧠 Effective Study Techniques
 </h2>
         <Marquee pauseOnHover={true} speed={25} className="font-bold bg-gray-200 py-4 container mx-auto rounded-2xl">
           Success isn’t about how many hours you sit at a desk, but how you use them.
