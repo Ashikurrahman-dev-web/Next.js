@@ -35,7 +35,7 @@ const DigitalPage = () => {
             </p>
 
             <p>
-              <strong>Rating:</strong> ⭐ 4.7
+              <strong>Rating:</strong> ⭐4.7
             </p>
 
             <p>

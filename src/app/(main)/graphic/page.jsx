@@ -35,7 +35,7 @@ const GraphicPage = () => {
             </p>
 
             <p>
-              <strong>Rating:</strong> ⭐ 4.8
+              <strong>Rating:</strong> ⭐4.8
             </p>
 
             <p>

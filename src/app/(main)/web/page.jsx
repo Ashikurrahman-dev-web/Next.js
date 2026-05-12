@@ -36,7 +36,7 @@ const WebPage = () => {
             </p>
 
             <p>
-              <strong>Rating:</strong> ⭐ 4.9
+              <strong>Rating:</strong> ⭐4.9
             </p>
 
             <p>
