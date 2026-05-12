@@ -10,8 +10,8 @@ const GraphicPage = () => {
 
         <Image
                       src={A}
-                      alt="Graphic Designer"             width={200} height={300}
-                      className=" rounded-2xl object-cover mb-4"
+                      alt="Graphic Designer"             width={500} height={300}
+                      className=" rounded-2xl object-cover mx-auto mb-4"
                     />
 
         <div className="p-6">

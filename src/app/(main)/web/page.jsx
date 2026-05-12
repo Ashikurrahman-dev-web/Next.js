@@ -10,8 +10,8 @@ const WebPage = () => {
 
        <Image
                      src={C}
-                     alt="Web Developer"             width={200} height={300}
-                     className=" rounded-2xl object-cover mb-4"
+                     alt="Web Developer"             width={500} height={300}
+                     className=" rounded-2xl object-cover mx-auto mb-4"
                    />
        
 

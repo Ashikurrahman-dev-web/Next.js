@@ -10,8 +10,8 @@ const DigitalPage = () => {
 
        <Image
                  src={B}
-                     alt="Digital Marketer"             width={200} height={100}
-                     className=" rounded-2xl object-cover mb-4"
+                     alt="Digital Marketer"             width={500} height={100}
+                     className=" rounded-2xl object-cover mx-auto mb-4"
                    />
 
         <div className="p-6">

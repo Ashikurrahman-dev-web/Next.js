@@ -55,7 +55,7 @@ export default function Home() {
                 </div>
             )}
           </nav>
-      <h6 className='flex text-green-600 mt-8 mb-8 text-2xl justify-center font-bold mx-auto'>Before visit the site please Login</h6>
+      
     <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-2 gap-12 items-center">
           
           <div className="space-y-6 ml-9">
@@ -166,7 +166,7 @@ export default function Home() {
              </div>
              <Link href={"/login"}>
         <button
-className="ml-5 border-2 border-[#0f172a] text-[#0f172a] hover:bg-[#0f172a] hover:text-white font-bold px-8 py-5 rounded-full transition-all duration-300">
+className="ml-5 border-2 cursor-pointer border-[#0f172a] text-[#0f172a] hover:bg-[#0f172a] hover:text-white font-bold px-8 py-5 rounded-full transition-all duration-300">
           See More
         </button>
       </Link>

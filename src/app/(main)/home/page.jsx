@@ -123,7 +123,7 @@ className="bg-[#0f0524] text-xs mt-2 text-white cursor-pointer transition px-6 p
              </div>
              <Link href={"/allcourse"}>
         <button
- className="ml-5 border-2 border-[#0f172a] text-[#0f172a] hover:bg-[#0f172a] hover:text-white font-bold px-8 py-5 rounded-full transition-all duration-300"
+ className="ml-5 border-2 cursor-pointer border-[#0f172a] text-[#0f172a] hover:bg-[#0f172a] hover:text-white font-bold px-8 py-5 rounded-full transition-all duration-300"
         >
           See More
         </button></Link>
