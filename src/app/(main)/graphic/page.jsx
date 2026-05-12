@@ -2,7 +2,7 @@ import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import A from "@/image/A.png";
-import EnrollModal from '@/components/EnrollModal';
+import EnrollModal from "@/component/shared/EnrollModal";
 const GraphicPage = () => {
     return (
         <div className="max-w-5xl mx-auto p-6 mt-10">
