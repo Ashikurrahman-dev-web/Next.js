@@ -9,7 +9,7 @@ const DigitalPage = () => {
       <div className="bg-white shadow-lg rounded-2xl overflow-hidden">
 
        <Image
-                     src={B}
+                 src={B}
                      alt="Digital Marketer"             width={200} height={100}
                      className=" rounded-2xl object-cover mb-4"
                    />

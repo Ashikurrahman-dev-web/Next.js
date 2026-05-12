@@ -8,6 +8,9 @@ import twitter from "@/image/twitter.png";
 import instagram from "@/image/instagram.png";
 import Link from "next/link";
 import NavLink from "@/component/shared/NavLink";
+import digital from "@/image/digital.png";
+import web from "@/image/web.png";
+import graphic from "@/image/graphic.png";
 export default function Home() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
