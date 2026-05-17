@@ -1,5 +1,7 @@
 # 📘 CourseHub
 
+🔗 Live Demo:https://next-js-a63d.vercel.app/
+
 📝 Description
 
 CourseHub provide premium courses, exclusive content, and personalized learning paths to accelerate your growth
