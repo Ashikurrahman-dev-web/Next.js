@@ -5,9 +5,10 @@ import NavLink from "@/component/shared/NavLink";
 import { authClient } from '@/lib/auth-client';
 import { Avatar } from "@heroui/react";
 const Navbar = () => {
-  const userData = authClient.useSession();
-  const user = userData?.user;
-  console.log(user);
+ const { data } = authClient.useSession();
+const user = data?.user;
+
+console.log(user);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="px-6 md:px-8 py-4 bg-white border-b border-gray-100">
@@ -27,11 +28,11 @@ const Navbar = () => {
   {user && (
   <div className="flex gap-4 items-center">
     <Avatar
-      size="sm"
-      src={user?.image}
-      name={user?.name}
-      showFallback
-    />
+  src={user?.image || ""}
+  name={user?.name || "User"}
+  size="sm"
+  showFallback
+/>    <span className="hidden md:inline-block text-gray-700">{user?.name}</span>
   </div>
 )}
   <NavLink   href={"/"}>    <button
