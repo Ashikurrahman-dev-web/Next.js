@@ -2,9 +2,8 @@
 import React, {useState,useRef, useEffect } from "react";
 import { authClient } from "@/lib/auth-client";
 import { FaCamera } from "react-icons/fa";
-import { useUser } from "@/context/UserContext";
 const ProfilePage = () => {
-  const { user, setUser } = useUser();
+  
 const [preview, setPreview] = useState("");
 const [name, setName] = useState("")
  const [image, setImage] = useState(null);
@@ -21,7 +20,7 @@ const fileInputRef = useRef();
 const handleImageChange = (e) => {
    const file = e.target.files[0];
     if (file) { 
-      setImage(file); setPreview(URL.createObjectURL(file));
+    setImage(file); setPreview(URL.createObjectURL(file));
      } };
   const handleUpdate = async (e) => {
     e.preventDefault();
