@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import NavLink from "@/component/shared/NavLink";
 import { authClient } from '@/lib/auth-client';
-import { Avatar } from "@heroui/react";
+import { Avatar } from '@heroui/react';
 const Navbar = () => {
  const { data } = authClient.useSession();
 const user = data?.user;
@@ -27,12 +27,10 @@ console.log(user);
           <div className="md:flex items-center gap-3">
   {user && (
   <div className="flex gap-4 items-center">
-    <Avatar
-  src={user?.image || "User Avatar"}
-  name={user?.name || "User"}
-  size="sm"
-  showFallback
-/>    <span className="hidden md:inline-block text-gray-700">{user?.name}</span>
+    <Avatar size="sm">
+                <Avatar.Image alt={user.name} src={user?.image} referrerPolicy="no-referrer" />
+                <Avatar.Fallback>{user.name[0]}</Avatar.Fallback>
+              </Avatar>  <span className="hidden md:inline-block text-gray-700">{user?.name}</span>
   </div>
 )}
   <NavLink   href={"/"}>    <button
