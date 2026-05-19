@@ -26,12 +26,10 @@ const Navbar = () => {
           <div className="md:flex items-center gap-3">
   {user && (
             <div className="flex gap-4 items-center">
-              <Avatar
-  size="sm"
-  src={user?.image}
-  name={user?.name}
-  showFallback
-/>
+              <Avatar size="sm">
+  <Avatar.Image alt={user.name} src={user?.image} referrerPolicy="no-referrer" />
+  <Avatar.Fallback>{user.name[0]}</Avatar.Fallback>
+</Avatar>
             </div>
           )}
   <NavLink   href={"/"}>    <button
