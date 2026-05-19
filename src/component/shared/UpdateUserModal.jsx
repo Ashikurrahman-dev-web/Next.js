@@ -4,7 +4,7 @@
 import {Button, Input, Label, Modal, Surface, TextField} from "@heroui/react";
 import { Edit } from "lucide-react";
 import { BiUser } from "react-icons/bi";
-import { authClient } from './../lib/auth-client';
+import { authClient } from '@/lib/auth-client';
 
 export function UpdateUserModal() {
     const onSbumit =async (e) =>{
