@@ -25,13 +25,15 @@ const Navbar = () => {
         <div className="flex items-center space-x-4 md:space-x-6">
           <div className="md:flex items-center gap-3">
   {user && (
-            <div className="flex gap-4 items-center">
-              <Avatar size="sm">
-  <Avatar.Image alt={user.name} src={user?.image} referrerPolicy="no-referrer" />
-  <Avatar.Fallback>{user.name[0]}</Avatar.Fallback>
-</Avatar>
-            </div>
-          )}
+  <div className="flex gap-4 items-center">
+    <Avatar
+      size="sm"
+      src={user?.image}
+      name={user?.name}
+      showFallback
+    />
+  </div>
+)}
   <NavLink   href={"/"}>    <button
 className="cursor-pointer hidden md:block bg-[#7C3AED] text-white px-6 py-2 rounded-full font-medium hover:bg-[#6D28D9] transition shadow-sm">
              
