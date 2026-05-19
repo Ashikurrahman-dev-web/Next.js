@@ -20,7 +20,7 @@ import { useRouter } from "next/navigation";
   }
 };
          const {register, handleSubmit, formState:{errors}} = useForm()
-          const handleLoginFunc = async (data) => {
+        const handleLoginFunc = async (data) => {
 
   try {
 

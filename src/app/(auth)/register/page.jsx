@@ -2,7 +2,6 @@
 
 import {
   FaEye,
-  FaGoogle,
   FaEyeSlash,
 } from "react-icons/fa";
 
@@ -52,35 +51,11 @@ const RegisterPage = () => {
     }
   };
 
-  const handleGoogleSignIn = async () => {
-    try {
-      await authClient.signIn.social({
-        provider: "google",
-        callbackURL: "/home",
-      });
-    } catch (err) {
-      toast.error("❌ Google Login Failed!");
-    }
-  };
+ 
 
   return (
     <div className="max-w-7xl mx-auto mt-8 mb-8 grid md:grid-cols-2 gap-12 items-center">
-
-      <div className="grid gap-2">
-        <h6 className="text-center text-black font-bold">
-          Login with Google
-        </h6>
-
-        <button
-          onClick={handleGoogleSignIn}
- className="bg-blue-600 flex justify-center gap-2 items-center text-white py-2 rounded-full cursor-pointer"
-        >
-          <FaGoogle />
-          Login with Google
-        </button>
-      </div>
-
-      <div className="container mx-auto min-h-[80vh] flex justify-center items-center">
+ <div className="container mx-auto min-h-[80vh] flex justify-center items-center">
 
         <div className="p-4 rounded-xl bg-white">
 
