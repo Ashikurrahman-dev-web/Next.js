@@ -7,6 +7,7 @@ import { Avatar } from "@heroui/react";
 const Navbar = () => {
   const userData = authClient.useSession();
   const user = userData?.user;
+  console.log(user);
   const [menuOpen, setMenuOpen] = useState(false);
   return (
     <nav className="px-6 md:px-8 py-4 bg-white border-b border-gray-100">
@@ -25,10 +26,12 @@ const Navbar = () => {
           <div className="md:flex items-center gap-3">
   {user && (
             <div className="flex gap-4 items-center">
-              <Avatar size="sm">
-                <Avatar.Image alt={user.name} src={user?.image} referrerPolicy="no-referrer" />
-                <Avatar.Fallback>{user.name[0]}</Avatar.Fallback>
-              </Avatar>
+              <Avatar
+  size="sm"
+  src={user?.image}
+  name={user?.name}
+  showFallback
+/>
             </div>
           )}
   <NavLink   href={"/"}>    <button
