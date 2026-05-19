@@ -28,7 +28,7 @@ console.log(user);
   {user && (
   <div className="flex gap-4 items-center">
     <Avatar
-  src={user?.image || ""}
+  src={user?.image || "User Avatar"}
   name={user?.name || "User"}
   size="sm"
   showFallback
